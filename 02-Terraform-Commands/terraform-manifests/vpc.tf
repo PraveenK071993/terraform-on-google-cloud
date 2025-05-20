@@ -1,6 +1,6 @@
 # Terraform Provider Configuration: google
 provider "google" {
-  project = "gcplearn9"
+  project = "Udemy Practice"
   region = "us-central1"
 }
 
