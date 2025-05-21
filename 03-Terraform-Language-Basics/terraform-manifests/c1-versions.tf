@@ -14,4 +14,3 @@ provider "google" {
   project = "silver-fiber-457005-b8" #PROJECT_ID
   region = "us-central1"
 }
-

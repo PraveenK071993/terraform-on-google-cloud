@@ -13,7 +13,7 @@ resource "goolge_compute_firewall" "fw_ssh" {
 }
 
 # Firewall Rule: HTTP Port 80
-resource "goolge_compute_firewall" "fw_http" {
+resource "google_compute_firewall" "fw_http" {
   name = "fwrule-allow-http80"
   allow {
     ports = ["80"]
