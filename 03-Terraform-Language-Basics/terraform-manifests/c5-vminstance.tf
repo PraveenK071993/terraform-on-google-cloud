@@ -1,20 +1,23 @@
 # Resource Block: Create a single Compute Engine instance
 resource "google_compute_instance" "myapp1" {
-  name         = "myapp1"
+  name = "myapp1"
   machine_type = "e2-micro"
-  zone         = "us-central1-a"
-  tags        = [tolist(google_compute_firewall.fw_ssh.target_tags)[0], tolist(google_compute_firewall.fw_http.target_tags)[0]]
+  zone = "us-central1-a"
+  #tags = ["ssh-tag","webserver-tag"]
+  tags = [tolist(goolge_compute_firewall.fw_ssh.target_tags)[0],tolist(goolge_compute_firewall.fw_http.target_tags)[0]]
+
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-12"
+      image = "debian-cloud/debian-11"
     }
+    
   }
-  # Install Webserver
+  #install webserver
   metadata_startup_script = file("${path.module}/app1-webserver-install.sh")
   network_interface {
-    subnetwork = google_compute_subnetwork.mysubnet.id 
+    subnetwork = google_compute_subnetwork.mysbnet.id
     access_config {
-      # Include this section to give the VM an external IP address
+      // Ephemeral public IP
     }
   }
 }
