@@ -1,5 +1,5 @@
 # Firewall Rule: SSH
-resource "goolge_compute_firewall" "fw_ssh" {
+resource "google_compute_firewall" "fw_ssh" {
   name = "fwrule-allow-ssh22"
   allow {
     ports = ["22"]
