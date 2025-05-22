@@ -1,21 +1,24 @@
 # Input Variables
 # GCP Project
-variable "gcp_project" {
-  description = "Project in which GCP Resources to be created"
+variable "gcp_project1" {
+  description = "Project in which GCP resources to be created"
   type = string
-  default = "kdaida123"
+  default = "silver-fiber-457005-b8"
+  
 }
 
 # GCP Region
 variable "gcp_region1" {
-  description = "Region in which GCP Resources to be created"
+  description = "Region in which gcp resources to be created"
   type = string
   default = "us-east1"
+  
 }
 
 # GCP Compute Engine Machine Type
 variable "machine_type" {
-  description = "Compute Engine Machine Type"
+  description = "Compute engine machine type"
   type = string
   default = "e2-small"
+
 }
