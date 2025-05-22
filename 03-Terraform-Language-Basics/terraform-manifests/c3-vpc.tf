@@ -1,6 +1,6 @@
 # Resource: VPC
 resource "google_compute_network" "myvpc" {
-  name = "vpc1"
+  name = "VVPPCC"
   auto_create_subnetworks = false
 }
 
