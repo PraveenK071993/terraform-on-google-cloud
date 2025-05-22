@@ -18,7 +18,7 @@ provider "google" {
 }
 
 # Terraform Provider-2: provider2
-rovider "google" {
+provider "google" {
   project = "silver-fiber-457005-b8" #PROJECT_ID
   region = "europe-west1"
   alias = "provider2"
