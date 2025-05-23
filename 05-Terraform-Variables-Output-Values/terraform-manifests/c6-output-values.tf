@@ -1,12 +1,13 @@
-# Terraform Output Values
+#Terraform Output Values
+
 ## ATTRIBUTES
 output "vm_instanceid" {
-  description = "VM Instance ID"
-  value = google_compute_instance.myapp1.instance_id
+  description = "VM INSTANCE ID"
+  value = google_compute_instance.myapp1.instance_id  
 }
 
-output "vm_selflink" {
-  description = "VM Instance Self link"
+output "selflink" {
+  description = "VM INSTANCE SELFLINK"
   value = google_compute_instance.myapp1.self_link
 }
 
@@ -16,17 +17,18 @@ output "vm_id" {
 }
 
 output "vm_external_ip" {
-  description = "VM External IPs"
+  description = "VM EXTERNAL IP"
   value = google_compute_instance.myapp1.network_interface.0.access_config.0.nat_ip
 }
 
 ## ARGUMENTS
-output "vm_name" {
-  description = "VM Name"
-  value = google_compute_instance.myapp1.name
+output "vm_machine_type" {
+  description = "VM MACHINE TYPE"
+  value = google_compute_instance.myapp1.machine_type
 }
 
-output "vm_machine_type" {
-  description = "VM Machine Type"
-  value = google_compute_instance.myapp1.machine_type
+output "vm_name" {
+  description = "VM NAME"
+  value = google_compute_instance.myapp1.name
+  
 }
