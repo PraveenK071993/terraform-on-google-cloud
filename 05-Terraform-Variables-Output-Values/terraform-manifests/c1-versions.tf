@@ -1,9 +1,9 @@
 # Terraform Settings Block
 terraform {
-  required_version = "~> 1.12.0"
+  required_version = ">= 1.0.0"
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = "~> 6.36.0"
     }
   }
@@ -12,5 +12,5 @@ terraform {
 # Terraform Provider Block
 provider "google" {
   project = var.gcp_project1
-  region = var.gcp_region1
+  region  = var.gcp_region1
 }
